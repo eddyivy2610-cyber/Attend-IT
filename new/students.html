@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttendIT | Student Dashboard</title>
+    <link rel="stylesheet" href="students.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>AttendIT</h2>
+                <ul class="menu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="students.html" class="active">Students</a></li>
+                    <li><a href="#">Attendance</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Skills</a></li>
+                    
+                </ul>
+                <div class="bottom-section"> 
+                    <hr>  
+                    <ul class="bottom">
+                        <li class=><a href="#">Settings</a></li>
+                        <li class><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </aside>
+
+
+        <main class="main">
+            <header class="topbar">
+                <h1>Students</h1>
+                    <div class="user">
+                        <img src="a2db5a63-8352-4bc8-bb07-d43541181e49.jpg" alt="User Icon">
+                        <span>Sir Tim</span>
+                    </div>
+            </header>
+
+            <section class="search">
+                <input type="text" placeholder="Search students...">
+                <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+
+                <select>
+                    <option>All Courses</option>
+                    <option>Computer Science</option>
+                    <option>Computer Engineering</option>
+                    <option>Software Engineering</option>
+                </select>
+                    <button>Reset</button>
+            </section>
+
+            <section class="students-table">
+                <table>
+                    <thread>
+                        <tr>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Phone</th>
+                            <th>School</th>
+                            <th>Skill</th>
+                            <th>Status</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr class="student-row" data-name="Lucky John" data-phone="07081066985" data-course="Computer Science" data-status="Active" data-school="Ahmadu Bello University" data-skill="Web Dev, Graphics Design" data-institution="Ahmadu Bello University" data-period="May, 2025-October, 2025" data-present="85" data-absent="4" data-late="20" data-projects="Web-App" data-score="92%">
+                            <td>
+                                <div class="student-info">
+                                    <img src="PSX_20211208_162846_2 (1).jpg" alt="Student 1">
+                                </div>
+                                <div>
+                                    <strong>Lucky John</strong><br>
+                                    <small>
+                                        ID: S12345<br>
+                                    </small>
+                                </div>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>07081066985</td>
+                            <td>Ahmadu Bello University</td>
+                            <td>Python, Java</td>
+                            <td><span class="status-active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="student-info" class="student-row" data-name="Zipporah Toma" data-phone="07081066985" data-course="Computer Science" data-status="Active" data-skill="Web Dev" data-institution="Nuhu Bamali Polytechnic" data-period="May, 2025-September, 2025" data-present="65" data-absent="20" data-late="40" data-projects="Portfolio" data-score="62%">
+                                    <img src="" alt="Student 2">
+                                </div>
+                                <div>
+                                    <strong>Zipporah Toma</strong><br>
+                                    <small>ID: S67890</small><br>
+                                </div>
+                            </td>
+                            <td>Computer Engineering</td>
+                            <td>987-654-3210</td>
+                            <td>Nuhu Bamali Polytechnic</td>
+                            <td>C++, JavaScript</td>
+                            <td><span class="status-pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                     
+                </table>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2024 AttendIT. All rights reserved.</p>
+            </footer>
+        </main>
+
+
+        <aside class="profile-card">
+            <div class="student-profle" id="student-details">
+                <button class="close-btn">&times;</button>
+                
+                <div class="profile-details">
+                    <img src="PSX_20211208_162846_2 (1).jpg" alt="Student Profile Picture">
+                    <h2 id="profile-name">Student Name</h2>
+                    <span id="active-status" class="profile-status"></span>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p id="detailEmail"></p>
+                    <p id="detailPhone"></p>
+                    <p id="detailSchool"></p>
+                    <p id="detailCourse"></p>
+                    <p id="detailPeriod"></p>
+                    <p id="detailSkill"></p>
+                </div>
+
+                <div class="attendance-record">
+                    <h4>Attendance Record</h4>
+                    <p><strong id="present"></strong>Present</p>
+                    <p><strong id="late"></strong>Late</p>
+                    <p><strong id="absent"></strong>Absent</p>   
+                </div>
+
+                <div class="Perfomance">
+                    <h4>Perfomance Rating</h4>
+                    <p><strong id="rating-score" class="rate-score"></strong></p>
+                    <p><strong id="projects"></strong></p>
+                </div> 
+
+                <div class="action-buttons"></div>
+
+            </div>
+        </aside>
+     
+    </div>
+    <script src="students.js"></script>
+</body>
+   
+</html>
