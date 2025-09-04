@@ -9,15 +9,17 @@ body{
     position: relative;
 }
 .left{
-    width: 25%;
+    width: 23%;
     height: 100vh;
     position: relative;
     background: linear-gradient(135deg, #141066 0%, #3f47b6 100%);
     color: #fff;
     padding: 25px;
-    font-weight: bold;
     font-size: 20px;
     position: fixed ;
+}
+h1{
+    margin-left: 10px;
 }
 .navbar{
     margin: 0px;
@@ -36,13 +38,18 @@ body{
     text-decoration: none;
     color: #fff;
 }
+.navbar i{
+    margin-right: 15px ;
+}
 .dwn{
-    margin-top: 250px;
+    margin-top: 200px;
 }
 .right{
-    background-color: #f4f7f4;
+    background-color: #dee0de;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    position: relative;
+    margin-left: 23%;
 }
 .nav{
     margin: 15px;
@@ -50,36 +57,50 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.nav2{
+.icons{
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+.icons .circle{
+    font-size: 25px;
+}
+.card{
     display: flex;
     margin: 15px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
-.activities{
+.cards{
     background-color: white;
     border-radius: 10px;
     width: 230px;
     height: 70px;
     align-items: center;
+    padding: 20px 30px;
 }
-.activities:hover{
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+.cards:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
-.nav3{
+.card2{
     display: flex;
     margin: 15px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
-.performance{
+.cards-2{
     background-color: white;
     border-radius: 10px;
     width: 320px;
     height: 120px;
     align-items: center;
+    padding: 20px;
+}
+.cards-2:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 .recent{
     margin: 15px;
@@ -97,7 +118,7 @@ body{
 
 }
 .recent p{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .recent .time{
     color: #b3b2b2;
