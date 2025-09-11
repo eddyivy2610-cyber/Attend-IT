@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttendIT | Student Dashboard</title>
+    <link rel="stylesheet" href="students.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>AttendIT</h2>
+                <ul class="menu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="students.html" class="active">Students</a></li>
+                    <li><a href="#">Attendance</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Settings</a></li>
+                    
+                </ul>
+                <div class="bottom-section"> 
+                    <hr>  
+                    <ul class="bottom">
+                        <li class><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </aside>
+        <main class="main">
+            <div class="page-header">
+                <img src="image/1.jpg" alt="icon">
+            </div>
+            <header class="topbar">
+                <h1>Daily Attendance</h1>
+                <div class="top-controls">
+                    <div class="date-picker">
+                        <label for="Attendance-date">Select Date</label>
+                        <input type="date" id="Attendance-date">
+                    </div>
+                    <button class="export-btn">Export PDF</button>
+                </div>
+            </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="left">Student</th>
+                        <th>Status</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU001</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU002</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU003</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU004</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU005</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU006</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU007</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU008</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="Students-info">
+                                <img src="image/1.jpg" alt="">
+                                <div class="student-details">
+                                    <p class="name">Sarah Johnson</p>
+                                    <p class="id">ID: STU009</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="status-btn present">Present</button>
+                            <button class="status-btn absent">Absent</button>
+                            <button class="status-btn late">Late</button>
+                        </td>
+                        <td>July - Sept 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="action">
+                <button class="primary-btn submit">Submit</button>
+                <button class="primary-btn reset">Reset</button>
+            </div> -->
+        </div>
+        <div class="action">
+                <button class="primary-btn submit">Submit</button>
+                <button class="primary-btn reset">Reset</button>
+            </div>
+        <!-- <footer class="footer">
+            <p>&copy; 2024 AttendIT. All rights reserved.</p>
+        </footer> -->
+        </main>
+    </div>
+</body>
