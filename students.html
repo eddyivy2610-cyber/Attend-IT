@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="assets/css/students.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#" >
+                        <span class="icon">
+                            <ion-icon name="shield-checkmark"></ion-icon>
+                        </span>
+                        <h3 class="title">Attendit</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Dashboard" data-page="dashboard">
+                        <span class="icon">
+                            <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Students" data-page="students">
+                        <span class="icon">
+                            <ion-icon name="school-outline"></ion-icon>
+                        </span>
+                        <span class="title">Students</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Attendance" data-page="attendance">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Attendance</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Reports" data-page="reports">
+                        <span class="icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="About" data-page="about">
+                        <span class="icon">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">About</span>
+                    </a>
+                </li>
+
+                <li class="down">
+                    <a href="#" data-tooltip="Settings" >
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li class="down">
+                    <a href="#" data-tooltip="Sign Out" data-page="settings">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline" style="color: rgb(255, 60, 60);"></ion-icon>
+                        </span>
+                        <span class="title" style="color:rgb(255, 60, 60);">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Dashboard</h1>
+                <p class="page-description">Welcome, view manage and navigate shortcuts.</p>
+            </div>
+            
+             <div class="content">
+                <!-- Filter Section -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <h3 class="filter-title">Filter Students</h3>
+                        <div class="filter-actions">
+                            <div class="view-toggle">
+                                <button class="view-btn active" id="list-view-btn">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                                <button class="view-btn" id="grid-view-btn">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                            </div>
+                            <button class="export-btn">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label class="filter-label">Name</label>
+                            <input type="text" class="filter-input" placeholder="Search by name">
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Year Joined</label>
+                            <select class="filter-select">
+                                <option value="">All Years</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">School</label>
+                            <select class="filter-select">
+                                <option value="">All Schools</option>
+                                <option value="ABU">Ahmadu Bello University</option>
+                                <option value="NBP">Nuhu Bamalli Polytechnic</option>
+                                <option value="AFIT">AFIT Kaduna</option>
+                                <option value="UNILAG">University of Lagos</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Course</label>
+                            <select class="filter-select">
+                                <option value="">All Courses</option>
+                                <option value="CS">Computer Science</option>
+                                <option value="IT">Information Technology</option>
+                                <option value="ICE">Information and Communication Engineering</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Status</label>
+                            <select class="filter-select">
+                                <option value="">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="year-pagination">
+                    <button class="year-btn active">2025</button>
+                    <button class="year-btn">2024</button>
+                    <button class="year-btn">2023</button>
+                    <button class="year-btn">2022</button>
+                    <button class="year-btn">2021</button>
+                </div>
+                
+                <!-- Students Container -->
+                <div class="students-container">
+                    <div class="students-header">
+                        <div class="students-count">Showing <span id="student-count">12</span> students</div>
+                    </div>
+                    
+                    <!-- Students List View -->
+                    <div class="students-list" id="students-list-view">
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/john-lucky/100/100.jpg" alt="John Lucky" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">John Lucky</div>
+                                <div class="student-details">Computer Science • Ahmadu Bello University</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/zipporah-toma/100/100.jpg" alt="Zipporah Toma" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Zipporah Toma</div>
+                                <div class="student-details">Computer Science • Nuhu Bamalli Polytechnic</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/banes-peter/100/100.jpg" alt="Banes Peter" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Banes Peter</div>
+                                <div class="student-details">Computer Science • Ahmadu Bello University</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/ananu-awodi/100/100.jpg" alt="Ananu Awodi" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Ananu Awodi</div>
+                                <div class="student-details">Information and Communication Engineering • AFIT Kaduna</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/samuel-ndem/100/100.jpg" alt="Samuel Ndem" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Samuel Ndem</div>
+                                <div class="student-details">Computer Science • Nuhu Bamalli Polytechnic</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/jane-doe/100/100.jpg" alt="Jane Doe" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Jane Doe</div>
+                                <div class="student-details">Computer Science • University of Lagos</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/john-smith/100/100.jpg" alt="John Smith" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">John Smith</div>
+                                <div class="student-details">Information Technology • University of Ibadan</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/mary-johnson/100/100.jpg" alt="Mary Johnson" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Mary Johnson</div>
+                                <div class="student-details">Computer Science • University of Nigeria</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/david-wilson/100/100.jpg" alt="David Wilson" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">David Wilson</div>
+                                <div class="student-details">Information Technology • University of Benin</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/susan-brown/100/100.jpg" alt="Susan Brown" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Susan Brown</div>
+                                <div class="student-details">Computer Science • University of Port Harcourt</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/james-taylor/100/100.jpg" alt="James Taylor" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">James Taylor</div>
+                                <div class="student-details">Information Technology • Federal University of Technology</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/patricia-moore/100/100.jpg" alt="Patricia Moore" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Patricia Moore</div>
+                                <div class="student-details">Computer Science • University of Abuja</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/robert-jones/100/100.jpg" alt="Robert Jones" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Robert Jones</div>
+                                <div class="student-details">Information Technology • University of Nigeria Nsukka</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-row">
+                            <img src="https://picsum.photos/seed/linda-davis/100/100.jpg" alt="Linda Davis" class="student-photo">
+                            <div class="student-info">
+                                <div class="student-name">Linda Davis</div>
+                                <div class="student-details">Computer Science • Covenant University</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                            </div>
+                            <div>
+                                <span class="student-status status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </div>
+                            <div class="student-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Students Grid View -->
+                    <div class="students-grid" id="students-grid-view" style="display: none;">
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/john-lucky/100/100.jpg" alt="John Lucky" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">John Lucky</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">Ahmadu Bello University</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/zipporah-toma/100/100.jpg" alt="Zipporah Toma" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Zipporah Toma</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">Nuhu Bamalli Polytechnic</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/banes-peter/100/100.jpg" alt="Banes Peter" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Banes Peter</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">Ahmadu Bello University</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/ananu-awodi/100/100.jpg" alt="Ananu Awodi" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Ananu Awodi</div>
+                                <div class="student-details">Information and Communication Engineering</div>
+                                <div class="student-details">AFIT Kaduna</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/samuel-ndem/100/100.jpg" alt="Samuel Ndem" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Samuel Ndem</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">Nuhu Bamalli Polytechnic</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/jane-doe/100/100.jpg" alt="Jane Doe" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Jane Doe</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">University of Lagos</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/john-smith/100/100.jpg" alt="John Smith" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">John Smith</div>
+                                <div class="student-details">Information Technology</div>
+                                <div class="student-details">University of Ibadan</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/mary-johnson/100/100.jpg" alt="Mary Johnson" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Mary Johnson</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">University of Nigeria</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/david-wilson/100/100.jpg" alt="David Wilson" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">David Wilson</div>
+                                <div class="student-details">Information Technology</div>
+                                <div class="student-details">University of Benin</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/susan-brown/100/100.jpg" alt="Susan Brown" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Susan Brown</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">University of Port Harcourt</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/james-taylor/100/100.jpg" alt="James Taylor" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">James Taylor</div>
+                                <div class="student-details">Information Technology</div>
+                                <div class="student-details">Federal University of Technology</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/patricia-moore/100/100.jpg" alt="Patricia Moore" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Patricia Moore</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">University of Abuja</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/robert-jones/100/100.jpg" alt="Robert Jones" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Robert Jones</div>
+                                <div class="student-details">Information Technology</div>
+                                <div class="student-details">University of Nigeria Nsukka</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="student-card">
+                            <img src="https://picsum.photos/seed/linda-davis/100/100.jpg" alt="Linda Davis" class="student-photo-large">
+                            <div class="student-card-body">
+                                <div class="student-name">Linda Davis</div>
+                                <div class="student-details">Computer Science</div>
+                                <div class="student-details">Covenant University</div>
+                                <div class="student-details">Joined: March 26, 2025</div>
+                                <div style="margin: 10px 0;">
+                                    <span class="student-status status-active">
+                                        <i class="fas fa-circle"></i> Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="student-card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                    <span class="tooltip">Edit</span>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span class="tooltip">Delete</span>
+                                </button>
+                                <button class="action-btn report">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="tooltip">View Report</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="scroll-to-bottom" id="scroll-to-bottom-btn">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+
+            
+        </div>
+    </div>
+
+    <div id="sidebar-tooltip" class="sidebar-tooltip"></div>
+   
+    <script src="assets/js/students.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
