@@ -1,18 +1,18 @@
 <?php
+
 <?php
-// ...existing code...
+
 require_once __DIR__ . '/includes/db.php';
 
 // total students
 $row = db_query_one("SELECT COUNT(*) AS c FROM `_student information`");
 $total = $row['c'] ?? 0;
 
-// gender breakdown (example)
 $row = db_query_one("SELECT SUM(CASE WHEN LOWER(`gender`) LIKE '%female%' THEN 1 ELSE 0 END) AS f, SUM(CASE WHEN LOWER(`gender`) LIKE '%male%' THEN 1 ELSE 0 END) AS m FROM `_student information`");
 $female = $row['f'] ?? 0;
 $male = $row['m'] ?? 0;
 
-// placeholder for avg attendance (you need an attendance table for this)
+
 $avg_attendance = 'N/A';
 ?>
 <!-- ...existing code... -->
