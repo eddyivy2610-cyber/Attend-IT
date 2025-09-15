@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#" >
+                        <span class="icon">
+                            <ion-icon name="shield-checkmark"></ion-icon>
+                        </span>
+                        <h3 class="title">Attendit</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Dashboard" data-page="dashboard">
+                        <span class="icon">
+                            <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Students" data-page="students">
+                        <span class="icon">
+                            <ion-icon name="school-outline"></ion-icon>
+                        </span>
+                        <span class="title">Students</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Attendance" data-page="attendance">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Attendance</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Reports" data-page="reports">
+                        <span class="icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="About" data-page="about">
+                        <span class="icon">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">About</span>
+                    </a>
+                </li>
+
+                <li class="down">
+                    <a href="#" data-tooltip="Settings" >
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li class="down">
+                    <a href="#" data-tooltip="Sign Out" data-page="settings">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline" style="color: rgb(255, 60, 60);"></ion-icon>
+                        </span>
+                        <span class="title" style="color:rgb(255, 60, 60);">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Dashboard</h1>
+                <p class="page-description">Welcome, view manage and navigate shortcuts.</p>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">100</div>
+                        <div class="cardName">Total Interns</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="people-outline" style="color:#2136f3"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers" style="color:#d12e23">80</div>
+                        <div class="cardName">InActive Interns</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="person-remove-outline" style="color:#f44336"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers"  style="color:#219653">20</div>
+                        <div class="cardName">Active Interns</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="person-add-outline" style="color:#219653"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers" style="color:#c77800">70%</div>
+                        <div class="cardName">Avg. Daily Attendance</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="calendar-outline" style="color:#ff9800"></ion-icon>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="cardBox quick-actions">
+                <a href="#" style="text-decoration: none;">
+                    <div class="card actions">
+
+                        <div class="iconBx actions">
+                            <ion-icon name="checkmark-done-circle-outline" style="color:green"></ion-icon>
+                        </div>
+                        
+                        <div>
+                            <div class="numbers actions">Mark Attendance</div>
+                            <div class="cardName">Update and manage daily attendance</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#"  style="text-decoration: none;">
+                    <div class="card actions">
+                        <div class="iconBx actions">
+                            <ion-icon name="bar-chart-outline" style="color:rgb(22, 135, 135)"></ion-icon>
+                        </div>
+
+                        <div>
+                            <div class="numbers actions">Input Performance</div>
+                            <div class="cardName">Update students' performance metrics</div>
+                        </div>
+                    </div>
+                </a>
+                    
+                <a href="#"  style="text-decoration: none;">
+                    <div class="card actions">
+                        <div class="iconBx actions">
+                            <ion-icon name="list-outline" style="color:purple"></ion-icon>
+                        </div>
+
+                        <div>
+                            <div class="numbers actions">Students Overview</div>
+                            <div class="cardName">View and manage student information</div>
+                        </div>
+    
+                    </div>
+                </a>
+            </div>
+
+          
+
+            <!-- ================ Recent Checkin List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Status</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Gender</td>
+                                <td>POA</td>
+                                <td>Recent</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Ananu Awodi</td>
+                                <td>Female</td>
+                                <td>3 months</td>
+                                <td><span class="status delivered">Present</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Ahmed Musa</td>
+                                <td>Male</td>
+                                <td>6 months</td>
+                                <td><span class="status pending">Late</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Banes Peter</td>
+                                <td>Male</td>
+                                <td>6 months</td>
+                                <td><span class="status return">Absent</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Anisa Kwami</td>
+                                <td>Female</td>
+                                <td>3 months</td>
+                                <td><span class="status pending">Late</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>John Lucky</td>
+                                <td>Male</td>
+                                <td>6 months</td>
+                                <td><span class="status delivered">Present</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Zipporah Toma</td>
+                                <td>Female</td>
+                                <td>6 months</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Samuel Ndem</td>
+                                <td>Male</td>
+                                <td>6 months</td>
+                                <td><span class="status return">Absent</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Umar Phashir</td>
+                                <td>Male</td>
+                                <td>6 months</td>
+                                <td><span class="status return">Absent</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ================= Student Activity ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recents</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>Ahmadu Bello University</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>Nuhu Bamali Polytecnic</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>Nuhu Bamali Polytecnic</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>Dutsinma Katsina</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>AFIT Kaduna</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>Kaduna State University</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>New student <br> <span>Nuhu Bamali Polytecnic</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                               <h4>New student <br> <span>Yobe State University</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar-tooltip" class="sidebar-tooltip"></div>
+   
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/dashboard.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

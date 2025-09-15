@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/reports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#" >
+                        <span class="icon">
+                            <ion-icon name="shield-checkmark"></ion-icon>
+                        </span>
+                        <h3 class="title">Attendit</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Dashboard" data-page="dashboard">
+                        <span class="icon">
+                            <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Students" data-page="students">
+                        <span class="icon">
+                            <ion-icon name="school-outline"></ion-icon>
+                        </span>
+                        <span class="title">Students</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Attendance" data-page="attendance">
+                        <span class="icon">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                        </span>
+                        <span class="title">Attendance</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Reports" data-page="reports">
+                        <span class="icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="About" data-page="about">
+                        <span class="icon">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">About</span>
+                    </a>
+                </li>
+
+                <li class="down">
+                    <a href="#" data-tooltip="Settings" >
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li class="down">
+                    <a href="#" data-tooltip="Sign Out" data-page="settings">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline" style="color: rgb(255, 60, 60);"></ion-icon>
+                        </span>
+                        <span class="title" style="color:rgb(255, 60, 60);">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Reports</h1>
+                <p class="page-description">Update and keep tabs on student performances.</p>
+            </div>
+
+           <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <!-- Main Content Area -->
+                <div class="main-content">
+                    <!-- Student Profile Section -->
+                    <div class="student-profile">
+                        <img src="https://picsum.photos/seed/john-lucky/200/200.jpg" alt="John Lucky" class="student-avatar">
+                        <div class="student-info">
+                            <h2>
+                                John Lucky
+                                <span class="status-badge status-active">
+                                    <i class="fas fa-circle"></i> Active
+                                </span>
+                            </h2>
+                            <div class="student-position">Computer Science • Ahmadu Bello University</div>
+                            <div class="student-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>johnlucky2610@gmail.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+234 708 1066 985</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>March 26, 2025 - November 26, 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Mr Kabir Muhammad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Student Profile Details -->
+                    <div class="reports-card">
+                        <div class="profile-tabs">
+                            <button class="profile-tab active" onclick="switchProfileTab('basic')">Basic Info</button>
+                            <button class="profile-tab" onclick="switchProfileTab('personal')">Personal</button>
+                            <button class="profile-tab" onclick="switchProfileTab('professional')">Professional</button>
+                        </div>
+                        
+                        <div id="basic-info" class="tab-content active">
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="info-label">Gender</span>
+                                    <span class="info-value">Male</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Skills Interest</span>
+                                    <span class="info-value">Web Design, Graphics Design</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Join Date</span>
+                                    <span class="info-value">March 26, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">End Date</span>
+                                    <span class="info-value">November 26, 2025</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Supervisor</span>
+                                    <span class="info-value">Mr Kabir Muhammad</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="personal-info" class="tab-content">
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="info-label">Birthday</span>
+                                    <span class="info-value">October 26</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Nationality</span>
+                                    <span class="info-value">Nigerian</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Marital Status</span>
+                                    <span class="info-value">Single</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Other Contacts</span>
+                                    <span class="info-value">081 5524 6233</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="professional-info" class="tab-content">
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="info-label">Degree</span>
+                                    <span class="info-value">Undergraduate</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Course of Study</span>
+                                    <span class="info-value">Computer Science</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Study Years</span>
+                                    <span class="info-value">3</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Period of Attachment</span>
+                                    <span class="info-value">6 months</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Other Interests</span>
+                                    <span class="info-value">Nil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Student List Card -->
+                    <div class="student-list-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Other Students</h3>
+                        </div>
+                        <div class="student-table-container">
+                            <table class="student-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Course</th>
+                                        <th>School</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/zipporah-toma/100/100.jpg" alt="Zipporah Toma" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Zipporah Toma</span>
+                                                    <span class="student-id">Female</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Computer Science</td>
+                                        <td>Nuhu Bamalli Polytechnic</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Zipporah Toma')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/banes-peter/100/100.jpg" alt="Banes Peter" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Banes Peter</span>
+                                                    <span class="student-id">Male</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Computer Science</td>
+                                        <td>Ahmadu Bello University</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Banes Peter')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/ananu-awodi/100/100.jpg" alt="Ananu Awodi" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Ananu Awodi</span>
+                                                    <span class="student-id">Female</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Information and Communication Engineering</td>
+                                                <td>AFIT Kaduna</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Ananu Awodi')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/samuel-ndem/100/100.jpg" alt="Samuel Ndem" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Samuel Ndem</span>
+                                                    <span class="student-id">Male</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Computer Science</td>
+                                        <td>Nuhu Bamalli Polytechnic</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Samuel Ndem')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/jane-doe/100/100.jpg" alt="Jane Doe" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Jane Doe</span>
+                                                    <span class="student-id">Female</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Computer Science</td>
+                                                <td>University of Lagos</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Jane Doe')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/john-smith/100/100.jpg" alt="John Smith" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">John Smith</span>
+                                                    <span class="student-id">Male</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Information Technology</td>
+                                                <td>University of Ibadan</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('John Smith')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/mary-johnson/100/100.jpg" alt="Mary Johnson" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Mary Johnson</span>
+                                                    <span class="student-id">Female</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Computer Science</td>
+                                                <td>University of Nigeria</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Mary Johnson')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/david-wilson/100/100.jpg" alt="David Wilson" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">David Wilson</span>
+                                                    <span class="student-id">Male</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Information Technology</td>
+                                                <td>University of Benin</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('David Wilson')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/susan-brown/100/100.jpg" alt="Susan Brown" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">Susan Brown</span>
+                                                    <span class="student-id">Female</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Computer Science</td>
+                                                <td>University of Port Harcourt</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('Susan Brown')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="student-name">
+                                                <img src="https://picsum.photos/seed/james-taylor/100/100.jpg" alt="James Taylor" class="student-avatar-small">
+                                                <div class="student-details-small">
+                                                    <span class="student-fullname">James Taylor</span>
+                                                    <span class="student-id">Male</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Information Technology</td>
+                                                <td>Federal University of Technology</td>
+                                        <td>
+                                            <button class="view-profile-btn" onclick="viewStudentProfile('James Taylor')">View Profile</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Sidebar -->
+                <div class="right-sidebar">
+                    <!-- Calendar Card -->
+                    <div class="reports-card">
+                        <div class="card-title">
+                            <span>July 2020</span>
+                            <div>
+                                <button onclick="changeMonth(-1)" style="background: none; border: none; color: var(--primary); cursor: pointer;">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button onclick="changeMonth(1)" style="background: none; border: none; color: var(--primary); cursor: pointer;">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar-grid" id="calendar-grid">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </div>
+                            <div class="calendar-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color legend-present"></div>
+                                    <span>Present</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color legend-late"></div>
+                                    <span>Late</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color legend-absent"></div>
+                                    <span>Absent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Report Card -->
+                    <div class="reports-card">
+                        <div class="card-title">
+                            <span>Skills Report</span>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                        <div class="attendance-summary">
+                            <div class="attendance-item attendance-late">
+                                <div class="attendance-count">3</div>
+                                <div class="attendance-label">Late</div>
+                            </div>
+                            <div class="attendance-item attendance-present">
+                                <div class="attendance-count">22</div>
+                                <div class="attendance-label">Present</div>
+                            </div>
+                            <div class="attendance-item attendance-absent">
+                                <div class="attendance-count">2</div>
+                                <div class="attendance-label">Absent</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Rating Card -->
+                    <div class="reports-card">
+                        <div class="card-title">
+                            <span>Rate Skills</span>
+                        </div>
+                        <form class="rating-form" id="skillsRatingForm">
+                            <div class="form-group">
+                                <label class="form-label" for="technical-skill">Technical Skill</label>
+                                <input type="range" id="technical-skill" class="rating-input" min="0" max="100" value="75">
+                                <div class="rating-value">
+                                    <span>0</span>
+                                    <span class="rating-display" id="technical-value">75</span>
+                                    <span>100</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="learning-activity">Learning Activity</label>
+                                <input type="range" id="learning-activity" class="rating-input" min="0" max="100" value="85">
+                                <div class="rating-value">
+                                    <span>0</span>
+                                    <span class="rating-display" id="learning-value">85</span>
+                                    <span>100</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="active-contribution">Active Contribution</label>
+                                <input type="range" id="active-contribution" class="rating-input" min="0" max="100" value="65">
+                                <div class="rating-value">
+                                    <span>0</span>
+                                    <span class="rating-display" id="contribution-value">65</span>
+                                    <span>100</span>
+                                </div>
+                            </div>
+                            <button type="button" class="submit-rating-btn" onclick="submitRating()">Submit Rating</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Reports Actions Card -->
+                    <div class="reports-card">
+                        <div class="card-title">
+                            <span>Export Reports</span>
+                        </div>
+                        <div class="reports-actions">
+                            <button class="export-btn" onclick="exportReport()">
+                                <i class="fas fa-download"></i> Export Report
+                            </button>
+                            <button class="send-btn" onclick="sendReport()">
+                                <i class="fas fa-paper-plane"></i> Send Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="sidebar-tooltip" class="sidebar-tooltip"></div>
+   
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/reports.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

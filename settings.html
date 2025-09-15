@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/settingspage.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#" >
+                        <span class="icon">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </span>
+                        <span class="title">Attendit</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Dashboard">
+                        <span class="icon">
+                            <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Students">
+                        <span class="icon">
+                            <ion-icon name="school-outline"></ion-icon>
+                        </span>
+                        <span class="title">Students</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Attendance">
+                        <span class="icon">
+                            <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Attendance</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Reports">
+                        <span class="icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="About">
+                        <span class="icon">
+                            <ion-icon name="information-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">About</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Settings">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-tooltip="Sign Out">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main settings-main" id="main-content">
+            <div class="topbar" id="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Settings ================== -->
+            <div class="settings-container dashboard-blend" id="settings-container">        
+                <div class="settings-card dashboard-card" id="settings-card">
+
+                    <!-- Header with title and action buttons -->
+                    <div class="settings-header">
+                        <h1 class="settings-title">Settings</h1>
+                        <div class="action-buttons">
+                            <button class="btn btn-cancel">Cancel</button>
+                            <button class="btn btn-save">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-content">
+                        <!-- Left navigation tabs -->
+                        <nav class="settings-nav">
+
+                            <button class="nav-tab active" data-tab="preferences">
+                                <ion-icon name="options-outline"></ion-icon>
+                                <span class="tab-text">Preferences</span>
+                            </button>
+
+                            <button class="nav-tab" data-tab="account">
+                                <ion-icon name="person-circle-outline"></ion-icon>
+                                <span class="tab-text">Account Settings</span>
+                            </button>
+
+                        </nav>
+
+                        <!-- Right content area -->
+                        <div class="settings-panel">
+                            <!-- Preferences Tab Content -->
+                            <div class="tab-content active" id="preferences">
+                                <div class="section">
+                                    <h3 class="section-title">Notifications</h3>
+                                        <div class="setting-item">
+
+                                            <div class="setting-info">
+                                                <label class="setting-label">Email Notifications</label>
+                                                <span class="setting-description">Receive notifications via email</span>
+                                            </div>
+
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" id="email-notifications" checked>
+                                                <label for="email-notifications" class="toggle-label"></label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <div class="setting-info">
+                                                <label class="setting-label">Push Notifications</label>
+                                                <span class="setting-description">Receive push notifications in browser</span>
+                                            </div> 
+
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" id="push-notifications">
+                                                <label for="push-notifications" class="toggle-label"></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="setting-item">
+                                            <div class="setting-info">
+                                                <label class="setting-label">Updates</label>
+                                                <span class="setting-description">Receive updates about new features</span>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" id="marketing-updates" checked>
+                                                <label for="marketing-updates" class="toggle-label"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section">
+                                        <h3 class="section-title">Appearance</h3>
+
+                                        <div class="setting-item">
+                                            <div class="setting-info">
+                                                <label class="setting-label">Theme</label>
+                                                <span class="setting-description">Choose your preferred theme</span>
+                                            </div>
+
+                                            <select class="setting-select" id="theme-select">
+                                                <option value="light">Light</option>
+                                                <option value="dark">Dark</option>
+                                                <option value="auto">System</option>
+                                            </select>
+                                        </div>
+                                        <div class="setting-item">
+                                            <div class="setting-info">
+                                                <label class="setting-label">Language</label>
+                                                <span class="setting-description">Select your preferred language</span>
+                                            </div>
+                                            <select class="setting-select" id="language-select">
+                                                <option value="en">English</option>
+                                                <option value="sy">System Defined</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+
+                            <!-- Account Settings Tab Content -->
+                            <div class="tab-content account" id="account">
+                                <div class="account-sections-row">
+                                    <div class="section accounts">
+                                     <h3 class="section-title">Personal Information</h3>
+                                        <div class="form-group">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" class="form-input" id="username" value="john_lucky" placeholder="Enter username">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-input" id="email" value="john.lucky@example.com" placeholder="Enter email address">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-input" id="phone" value="+234 123 456 7890" placeholder="Enter phone number">
+                                        </div>
+                                    </div>
+
+                                    <div class="section">
+                                        <h3 class="section-title">Security</h3>
+                                        <div class="form-group">
+                                             <label class="form-label">Current Password</label>
+                                            <input type="password" class="form-input" id="current-password" placeholder="Enter current password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">New Password</label>
+                                            <input type="password" class="form-input" id="new-password" placeholder="Enter new password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Confirm New Password</label>
+                                            <input type="password" class="form-input" id="confirm-password" placeholder="Confirm new password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar-tooltip" class="sidebar-tooltip"></div>
+   
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/settings.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
